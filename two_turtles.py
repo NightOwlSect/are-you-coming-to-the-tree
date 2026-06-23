@@ -67,10 +67,16 @@ def spiral_move(t):
         spiral_index += 1
 
 
+square_spiral_index = 0
+
+
 def draw_square_spiral(t):
-    for i in range(1, 40):
-        t.forward(i * 3)
+    global square_spiral_index
+    t.pendown()
+    if square_spiral_index < 1000:
+        t.forward(square_spiral_index / 12)
         t.right(90)
+        square_spiral_index += 1
 
 
 def animate():
