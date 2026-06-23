@@ -1,0 +1,22 @@
+{
+  "name": "Python EMSI 2026",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "editor.fontSize": 16,
+        "terminal.integrated.fontSize": 16
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {}
+  },
+  "forwardPorts": [5901, 6080],
+  "postCreateCommand": "pip install --upgrade pip && sudo apt-get update && sudo apt-get install -y python3-tk"
+}
